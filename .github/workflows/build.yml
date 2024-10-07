@@ -22,6 +22,15 @@ jobs:
         uses: actions/setup-node@v4.0.0
         with:
           node-version: "18.x"
+      # 使用缓存机制缓存 node_modules
+      - name: Cache node modules
+        uses: actions/cache@v3
+        with:
+          path: node_modules  # 缓存路径
+          key: ${{ runner.os }}-node-${{ hashFiles('package.json') }}  # 缓存键基于 package-lock.json
+          restore-keys: |
+            ${{ runner.os }}-node-
+            
       # 复制环境变量文件
       - name: Copy .env.example
         run: |
