@@ -11,7 +11,8 @@ on:
 jobs:
   release:
     name: Build Website
-    runs-on: windows-latest
+    # runs-on: windows-latest
+    runs-on: ubuntu-latest
 
     steps:
       # 检出 Git 仓库
@@ -45,11 +46,20 @@ jobs:
       # 构建程序
       - name: Build Website
         run: npm run build
-        env:
-          GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+        # env:
+        #   GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
       # 上传构建产物
-      - name: Upload artifacts
-        uses: actions/upload-artifact@v3.1.3
+      # - name: Upload artifacts
+      #   uses: actions/upload-artifact@v3.1.3
+      #   with:
+      #     name: Home
+      #     path: dist
+      # 将编译结果部署到服务器
+      - name: Deploy to Server
+        uses: appleboy/scp-action@v0.1.6
         with:
-          name: Home
-          path: dist
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USERNAME }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          source: "./dist/*"  # 假设构建后的文件在 dist 文件夹
+          target: "/www/wwwroot/malanxi/home"  # 替换为服务器上的路径
