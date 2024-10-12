@@ -27,9 +27,16 @@
               :style="index < 3 ? 'margin-bottom: 20px' : null"
               @click="jumpLink(item)"
             >
-              <Icon size="26">
-                <component :is="siteIcon[item.icon]" />
-              </Icon>
+                <template v-if="isCustom(item)">
+                  <Icon size="40">
+                    <img :src="item.path" alt="Logo" />
+                  </Icon>
+                </template>
+                <template v-else>
+                  <Icon size="26">
+                    <component :is="siteIcon[item.icon]" />
+                  </Icon>
+                </template>
               <span class="name text-hidden">{{ item.name }}</span>
             </div>
           </el-col>
@@ -82,7 +89,13 @@ const jumpLink = (data) => {
     window.open(data.link, "_blank");
   }
 };
-
+const isCustom = (item)=> {
+  if (!siteIcon[item.icon]) {
+    item.path = "/icon/"+item.icon+".svg"
+    return true
+  }
+  return  false
+};
 onMounted(() => {
   console.log(siteLinks);
 });

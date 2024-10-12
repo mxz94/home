@@ -2,7 +2,6 @@
   <!-- 加载 -->
   <Loading />
   <!-- 壁纸 -->
-  <script src="https://api.vvhan.com/api/script/snow"></script>
   <Background @loadComplete="loadComplete" />
   <!-- 主界面 -->
   <Transition name="fade" mode="out-in">

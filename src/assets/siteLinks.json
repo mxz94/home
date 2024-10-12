@@ -5,19 +5,19 @@
     "link": "https://blog.malanxi.top/"
   },
   {
-    "icon": "PhotoVideo",
-    "name": "相册",
-    "link": "https://photo.malanxi.top/"
-  },
-  {
     "icon": "Running",
     "name": "运动记录",
     "link": "https://run.malanxi.top/"
   },
   {
-    "icon": "PhotoVideo",
+    "icon": "immich",
     "name": "immich",
     "link": "https://immich.malanxi.top/"
+  },
+  {
+    "icon": "PhotoVideo",
+    "name": "相册",
+    "link": "https://photo.malanxi.top/"
   },
   {
     "icon": "Book",
