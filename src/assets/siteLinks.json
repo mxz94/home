@@ -17,17 +17,17 @@
   {
     "icon": "PhotoVideo",
     "name": "相册",
-    "link": "https://photo.malanxi.top/"
+    "link": "https://plog.malanxi.top/"
+  },
+  {
+    "icon": "Blog",
+    "name": "typecho博客",
+    "link": "https://pblog.malanxi.top/"
   },
   {
     "icon": "Book",
     "name": "网址集",
-    "link": "https://web.imsyy.top/"
-  },
-  {
-    "icon": "Fire",
-    "name": "今日热榜",
-    "link": "https://hot.imsyy.top/"
+    "link": "https://falre.malanxi.top/"
   },
   {
     "icon": "LaptopCode",
