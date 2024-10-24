@@ -15,6 +15,11 @@
     "link": "https://immich.malanxi.top/"
   },
   {
+    "icon": "Clipboard",
+    "name": "剪切板",
+    "link": "https://malanxi.top/c"
+  },
+  {
     "icon": "PhotoVideo",
     "name": "相册",
     "link": "https://plog.malanxi.top/"
@@ -27,7 +32,7 @@
   {
     "icon": "Book",
     "name": "网址集",
-    "link": "https://falre.malanxi.top/"
+    "link": "https://flare.malanxi.top"
   },
   {
     "icon": "LaptopCode",
